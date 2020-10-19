@@ -1,0 +1,44 @@
+{
+  "name": "@adoita/renovate-config",
+  "version": "0.0.1",
+  "description": "AdoitaIT Config Presets for RenovateBot",
+  "author": "AdoitaIT Solutions",
+  "license": "UNLICENSED",
+  "renovate-config": {
+    "default": {
+      "extends": [
+        ":semanticCommits",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":updateNotScheduled",
+        ":separateMajorReleases",
+        ":combinePatchMinorReleases",
+        ":ignoreModulesAndTests",
+        "group:monorepos",
+        "helpers:disableTypesNodeMajor"
+      ],
+      "prConcurrentLimit": 10,
+      "lockFileMaintenance": {
+        "automerge": true,
+        "extends": ["schedule:monthly"]
+      },
+      "vulnerabilityAlerts": {
+        "labels": ["security"],
+        "assignees": [
+          "@joseate",
+          "@frbuceta"
+        ]
+      },
+      "packageRules": [
+        {
+          "depTypeList": ["dependencies"],
+          "rangeStrategy": "bump"
+        },
+        {
+          "depTypeList": ["devDependencies"],
+          "rangeStrategy": "pin"
+        }
+      ],
+      "supportPolicy": ["lts", "active"]
+    }
+  }
+}
