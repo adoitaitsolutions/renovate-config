@@ -1,0 +1,55 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":semanticCommits",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreModulesAndTests",
+    "helpers:disableTypesNodeMajor"
+  ],
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "prConcurrentLimit": 10,
+  "requiredStatusChecks": [],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchSourceUrlPrefixes": ["https://github.com/loopbackio"],
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "LoopBack packages"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enable": true,
+    "automerge": true,
+    "extends": [
+      "schedule:monthly"
+    ]
+  },
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ],
+    "assignees": [
+      "@joseate",
+      "@frbuceta"
+    ]
+  },
+  "supportPolicy": [
+    "lts",
+    "active"
+  ]
+}
