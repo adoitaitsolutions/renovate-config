@@ -34,10 +34,7 @@
   ],
   "lockFileMaintenance": {
     "enable": true,
-    "automerge": true,
-    "extends": [
-      "schedule:monthly"
-    ]
+    "automerge": true
   },
   "vulnerabilityAlerts": {
     "labels": [
