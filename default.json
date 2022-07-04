@@ -13,7 +13,6 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "prConcurrentLimit": 10,
-  "requiredStatusChecks": [],
   "packageRules": [
     {
       "matchDepTypes": [
@@ -29,7 +28,7 @@
     }
   ],
   "lockFileMaintenance": {
-    "enable": true,
+    "enabled": true,
     "automerge": true
   },
   "vulnerabilityAlerts": {
@@ -40,9 +39,5 @@
       "@joseate",
       "@frbuceta"
     ]
-  },
-  "supportPolicy": [
-    "lts",
-    "active"
-  ]
+  }
 }

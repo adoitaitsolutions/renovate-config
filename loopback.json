@@ -12,7 +12,6 @@
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "prConcurrentLimit": 10,
-  "requiredStatusChecks": [],
   "packageRules": [
     {
       "matchDepTypes": [
@@ -30,10 +29,14 @@
         "major"
       ],
       "groupName": "LoopBack packages"
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     }
   ],
   "lockFileMaintenance": {
-    "enable": true,
+    "enabled": true,
     "automerge": true
   },
   "vulnerabilityAlerts": {
@@ -44,9 +47,5 @@
       "@joseate",
       "@frbuceta"
     ]
-  },
-  "supportPolicy": [
-    "lts",
-    "active"
-  ]
+  }
 }
