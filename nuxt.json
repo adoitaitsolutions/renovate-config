@@ -20,6 +20,10 @@
           "devDependencies"
         ],
         "rangeStrategy": "bump"
+      },
+      {
+        "matchSourceUrls": ["https://github.com/conventional-changelog/commitlint"],
+        "groupName": "Commitlint packages"
       }
     ],
     "lockFileMaintenance": {

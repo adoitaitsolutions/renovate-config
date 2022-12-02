@@ -25,6 +25,10 @@
         "devDependencies"
       ],
       "rangeStrategy": "pin"
+    },
+    {
+      "matchSourceUrls": ["https://github.com/conventional-changelog/commitlint"],
+      "groupName": "Commitlint packages"
     }
   ],
   "lockFileMaintenance": {

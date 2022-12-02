@@ -21,6 +21,10 @@
       "rangeStrategy": "bump"
     },
     {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
       "matchSourceUrlPrefixes": ["https://github.com/loopbackio"],
       "matchUpdateTypes": [
         "digest",
@@ -31,8 +35,8 @@
       "groupName": "LoopBack packages"
     },
     {
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "matchSourceUrls": ["https://github.com/conventional-changelog/commitlint"],
+      "groupName": "Commitlint packages"
     }
   ],
   "lockFileMaintenance": {
