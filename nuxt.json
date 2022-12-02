@@ -1,0 +1,38 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      ":semanticCommits",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":updateNotScheduled",
+      ":separateMajorReleases",
+      ":combinePatchMinorReleases",
+      ":ignoreModulesAndTests",
+      "group:monorepos",
+      "helpers:disableTypesNodeMajor"
+    ],
+    "dependencyDashboard": true,
+    "dependencyDashboardAutoclose": true,
+    "prConcurrentLimit": 10,
+    "packageRules": [
+      {
+        "matchDepTypes": [
+          "dependencies",
+          "devDependencies"
+        ],
+        "rangeStrategy": "bump"
+      }
+    ],
+    "lockFileMaintenance": {
+      "enabled": true,
+      "automerge": true
+    },
+    "vulnerabilityAlerts": {
+      "labels": [
+        "security"
+      ],
+      "assignees": [
+        "@joseate",
+        "@frbuceta"
+      ]
+    }
+  }
